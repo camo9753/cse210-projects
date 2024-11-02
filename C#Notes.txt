@@ -1,0 +1,12 @@
+Semicolon at the end of each expression
+
+Console.Writeline("text"); also
+Console.Write() #leaves curser on current line
+Console.ReadLine() #Reads a line 
+Console.Read() #Reads one character at a time
+
+Formated Output:
+Python [(f'')] == C# [($'')]
+int.Parse(var) #Takes a string into a variable
+
+
