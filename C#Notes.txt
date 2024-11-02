@@ -1,4 +1,4 @@
-Semicolon at the end of each expression
+Semicolon at the end of each expression!
 
 Console.Writeline("text"); also
 Console.Write() #leaves curser on current line
@@ -9,4 +9,24 @@ Formated Output:
 Python [(f'')] == C# [($'')]
 int.Parse(var) #Takes a string into a variable
 
+BUILT-IN VARIBABLE TYPES
+int - Integers (whole numbers, positive and negative)
+string - Strings (a sequence of characters, including letters, numbers, or symbols)
+float - Floating point numbers (numbers that use decimals)
+double - Double precision floating point numbers (just like a float, except it takes up twice as much memory, so it can hold larger numbers or numbers with more decimal places)
+bool - Boolean variables (true or false)
 
+INPUTS
+Python: color = input("What is your favorite color? ")
+C#: Console.Write("What is your favorite color? ");
+    string color = Console.ReadLine();
+
+CURLY BRACES DEFINE BLOCKS
+C#
+if (x > y)
+{
+  Console.WriteLine("greater");
+}
+Python
+if x > y:
+  print("greater")
