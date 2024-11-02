@@ -7,7 +7,12 @@ Console.Read() #Reads one character at a time
 
 Formated Output:
 Python [(f'')] == C# [($'')]
+
+CONVERTING TYPES
 int.Parse(var) #Takes a string into a variable
+<or>
+int var = 42;
+string textVersion = var.ToString();  #Takes an integer into a string
 
 BUILT-IN VARIBABLE TYPES
 int - Integers (whole numbers, positive and negative)
@@ -25,8 +30,45 @@ CURLY BRACES DEFINE BLOCKS
 C#
 if (x > y)
 {
-  Console.WriteLine("greater");
+  Console.WriteLine("greater than");
 }
 Python
 if x > y:
   print("greater")
+
+IF\ELSE IF\ELSE STATEMENTS
+C#
+if (x > y)
+{
+    Console.WriteLine("greater than y");
+}
+else if (x > z)
+{
+    Console.WriteLine("greater than z");
+}
+else
+{
+    Console.WriteLine("less than both");
+}
+Python
+if x > y:
+    print("greater than y")
+elif x > z:
+    print("greater than z")
+else:
+    print("less than both")
+
+AND,OR,NOT OPERATORS
+In C#, the 'and' operator is (&&) the 'or' operator is (||) and the 
+'not' operator is (!) which can be combined together with 
+other expressions and parentheses.
+
+VARIABLES & TYPES
+In C#, the naming convention for variables is to use "camel case." 
+This means that the variable starts with a lower case letter and 
+then additional words in the variable start with an upper case 
+letter like humps on a camel:
+    string color;
+    string firstName;
+    string lastName;
+    int velocityBeforeImpactWasMade;
