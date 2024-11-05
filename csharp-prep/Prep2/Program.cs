@@ -31,9 +31,13 @@ class Program
             letter = "F";        
         }
 
-        if ((letter == "A") || (letter == "B") || (letter == "C")){
-            Console.WriteLine($"Congradulations! You passed the class with a {letter}");}
-        else{
-            Console.WriteLine($"You failed the class with a {letter}. Better luck next time.");}
+        if ((letter == "A") || (letter == "B") || (letter == "C"))
+        {
+            Console.WriteLine($"Congradulations! You passed the class with a {letter}");
+        }
+        else
+        {
+            Console.WriteLine($"You failed the class with a {letter}. Better luck next time.");
         }
     }
+}
