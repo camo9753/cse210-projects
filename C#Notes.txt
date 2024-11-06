@@ -74,3 +74,24 @@ letter like humps on a camel:
     int velocityBeforeImpactWasMade;
 
 FOR LOOPS
+
+
+OBJECT ORIENTED PROGRAMMING (OOP)
+    Variable - noun/thing - name, age, numbers
+    Function - verb - do something, EX[calculateOutput()]
+    Object - also noun/thing - 
+        Combine variables (attributes) and functions (methods) into a one 
+        datatype (class)
+        Oject - instantiation (creation) of class, EX[recipe & cake]
+    Classes include:
+        name
+        attributes (data/variables)
+        methods (functions)
+    Class creation
+        1. Name class
+        2. Devide class methods
+        3. Create class attributes
+    Class Diagram:
+    [Name: ----------------- ]
+    [Attributes: (var:type)  ]
+    [Methods: functionType() ]
