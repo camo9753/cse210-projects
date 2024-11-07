@@ -15,26 +15,26 @@ int var = 42;
 string textVersion = var.ToString();  #Takes an integer into a string
 
 BUILT-IN VARIBABLE TYPES
-int - Integers (whole numbers, positive and negative)
-string - Strings (a sequence of characters, including letters, numbers, or symbols)
-float - Floating point numbers (numbers that use decimals)
-double - Double precision floating point numbers (just like a float, except it takes up twice as much memory, so it can hold larger numbers or numbers with more decimal places)
-bool - Boolean variables (true or false)
+    int - Integers (whole numbers, positive and negative)
+    string - Strings (a sequence of characters, including letters, numbers, or symbols)
+    float - Floating point numbers (numbers that use decimals)
+    double - Double precision floating point numbers (just like a float, except it takes up twice as much memory, so it can hold larger numbers or numbers with more decimal places)
+    bool - Boolean variables (true or false)
 
 INPUTS
-Python: color = input("What is your favorite color? ")
-C#: Console.Write("What is your favorite color? ");
-    string color = Console.ReadLine();
+    Python: color = input("What is your favorite color? ")
+    C#: Console.Write("What is your favorite color? ");
+        string color = Console.ReadLine();
 
 CURLY BRACES DEFINE BLOCKS
-C#
-if (x > y)
-{
-  Console.WriteLine("greater than");
-}
-Python
-if x > y:
-  print("greater")
+    C#
+    if (x > y)
+    {
+    Console.WriteLine("greater than");
+    }
+    Python
+    if x > y:
+    print("greater")
 
 IF\ELSE IF\ELSE STATEMENTS
     C#
@@ -89,7 +89,7 @@ OBJECT ORIENTED PROGRAMMING (OOP)
         methods (functions)
     Class creation
         1. Name class
-        2. Devide class methods
+        2. Divide class methods
         3. Create class attributes
     Class Diagram:
     [Name: ----------------- ]
