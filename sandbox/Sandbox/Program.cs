@@ -46,13 +46,15 @@ class Program
 
     public static void Main(string[] args)
     {
-        int x = 10;
-        Circle myCircle = new Circle(x);
-        Circle myCircle2 = new Circle(x + 2);
+        // int x = 10;
+        // Circle myCircle = new Circle(x);
+        // Circle myCircle2 = new Circle(x + 2);
 
-        myCircle.Display();
+        // myCircle.Display();
 
-
+        Console.Write("Please enter your name: ");
+        string name = Console.ReadLine();
+        Console.WriteLine(name);
 
 
 

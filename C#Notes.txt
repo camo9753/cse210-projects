@@ -6,13 +6,13 @@ Console.ReadLine() #Reads a line
 Console.Read() #Reads one character at a time
 
 Formated Output:
-Python [(f'')] == C# [($'')]
+    Python [(f'')] == C# [($'')]
 
 CONVERTING TYPES
-int.Parse(var) #Takes a string into a variable
-<or>
-int var = 42;
-string textVersion = var.ToString();  #Takes an integer into a string
+    int.Parse(var) #Takes a string into a variable
+    <or>
+    int var = 42;
+    string textVersion = var.ToString();  #Takes an integer into a string
 
 BUILT-IN VARIBABLE TYPES
     int - Integers (whole numbers, positive and negative)
@@ -95,3 +95,32 @@ OBJECT ORIENTED PROGRAMMING (OOP)
     [Name: ----------------- ]
     [Attributes: (var:type)  ]
     [Methods: functionType() ]
+
+FUNCTIONS 
+    returnType FunctionName(dataType parameter1, dataType parameter2)
+    {
+    // function_body
+    }
+
+    <NO parameters or a return type (hence the use of void)>
+    [C#]
+    void DisplayMessage()
+    {
+        Console.WriteLine("Hello world!");
+    }
+    [PYTHON]
+    def display_message():
+        print("Hello World")
+
+    <Function that accepts two integers as parameters, adds them together and returns the result. 
+    Notice function specifies return value of int at beginning of definition.>
+    [C#]
+    int AddNumbers(int first, int second)
+    {
+        int sum = first + second;
+        return sum;
+    }
+    [PYTHON]
+    def add_numbers(first, second):
+        sum = first + second
+        return sum
