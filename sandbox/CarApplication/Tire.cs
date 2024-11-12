@@ -4,11 +4,11 @@ class Tire
     private double radius;
     private double aspectRatio;
 
-    public Tire(double width, double aspectRatio, double radius)
+    public Tire(double w, double ar, double r)
     {
-        this.width = width;
-        this.radius = radius;
-        this.aspectRatio = aspectRatio;
+        this.width = w;
+        this.radius = r;
+        this.aspectRatio = ar;
     }
 
     public void Display()
