@@ -96,7 +96,7 @@ OBJECT ORIENTED PROGRAMMING (OOP)
     [Attributes: (var:type)  ]
     [Methods: functionType() ]
 
-FUNCTIONS 
+FUNCTIONS()/METHODS()
     returnType FunctionName(dataType parameter1, dataType parameter2)
     {
     // function_body
