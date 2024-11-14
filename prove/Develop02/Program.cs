@@ -4,8 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Entry test = new Entry();
-        test.CreateEntry();
+        Menu menu = new Menu();
+        menu.UserSelect();
         
         
     }

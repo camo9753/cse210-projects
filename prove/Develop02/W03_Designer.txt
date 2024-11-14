@@ -5,7 +5,7 @@ ENTRY:
             DisplayPrompt()
             GetInput()
     Attributes:
-        _prompts
+        _prompts: List<prompts>
         _date
         _userInput
 
@@ -14,7 +14,7 @@ JOURNAL:
         DisplayAllEntries()
         SaveEntriesToFile()
         ReadEntriesFromFile()
-        CreateEntry()
+        QueEntry()
     Attributes:
         _entries: List<Entry>
 
