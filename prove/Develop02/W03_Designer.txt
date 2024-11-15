@@ -22,7 +22,7 @@ MENU:
     Methods:
         DisplayMenu()
             Write()
-            DisplayEntries()
+            Display()
             Load()
             Save()
             Quit()

@@ -6,7 +6,5 @@ class Program
     {
         Menu menu = new Menu();
         menu.UserSelect();
-        
-        
     }
 }

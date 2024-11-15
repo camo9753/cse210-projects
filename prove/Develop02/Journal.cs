@@ -3,8 +3,8 @@ using System.IO;
 
 public class Journal
 {
-    private List<string> _entries;
-    Menu _menu = new Menu();
+    public List<string> _entries = new List<string> {};
+    
 
 
     public void DisplayAllEntries()
@@ -15,22 +15,21 @@ public class Journal
         }
     } 
 
-    public void SaveEntriesToFile()
+    public void SaveEntriesToFile(string file)
     {
-        string file = _menu.LoadFile();
+        // string file = _menu._fileName;
         using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (string entry in _entries)
             {
-                outputFile.WriteLine(entry);
+                outputFile.Write(entry);
             }
         }
-        _entries = new List<string> {};
+        _entries.Clear();
     }
 
-    public void ReadEntriesFromFile()
+    public void ReadEntriesFromFile(string file)
     {
-        string file = _menu.LoadFile();
         string[] lines = File.ReadAllLines(file);
         Console.WriteLine($"File Content:\n");
         foreach (string line in lines)
@@ -44,5 +43,10 @@ public class Journal
         Entry entry = new Entry();
         string recentEntry = entry.CreateEntry();
         _entries.Add(recentEntry);
+        foreach(string input in _entries)
+        {
+            Console.Write(input);
+        }
+        Console.WriteLine("---------------------");
     }
 }

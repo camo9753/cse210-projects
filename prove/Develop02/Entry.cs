@@ -19,7 +19,7 @@ public class Entry
         string date = GetTime();
         string randomPrompt = DisplayPrompt();
         string userInput = GetInput();
-        string userEntry = $"Date: {date} - Prompt: {randomPrompt}\n{userInput}";
+        string userEntry = $"Date: {date} - Prompt: {randomPrompt}\n    -{userInput}\n";
         return userEntry;
     }
     
@@ -32,6 +32,7 @@ public class Entry
 
     public string GetInput()
     {
+        Console.Write("> ");
         _userInput = Console.ReadLine();
         return _userInput;
     }
