@@ -9,6 +9,7 @@ public class Journal
 
     public void DisplayAllEntries()
     {
+        Console.WriteLine();
         foreach (string entry in _entries)
         {
             Console.WriteLine(entry);
@@ -43,10 +44,6 @@ public class Journal
         Entry entry = new Entry();
         string recentEntry = entry.CreateEntry();
         _entries.Add(recentEntry);
-        foreach(string input in _entries)
-        {
-            Console.Write(input);
-        }
-        Console.WriteLine("---------------------");
+        Console.WriteLine("\n<Entry was added to your que>");
     }
 }

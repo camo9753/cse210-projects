@@ -11,11 +11,14 @@ public class Menu
 
     public void DisplayMenu()
     {
+        Console.WriteLine("------------------------------");
+        Console.WriteLine("[Choose an Option Index]");
         _menuOptions = new List<string> {"Write", "Display", "Load", "Save", "Quit"};
         for (int i = 0; i < _menuOptions.Count; i++)
         {
             Console.WriteLine($"{i+1}. {_menuOptions[i]}");
         }
+        Console.WriteLine("------------------------------");
     }
 
     public void Write()
@@ -27,19 +30,29 @@ public class Menu
 
     public void Display()
     {
-        Console.WriteLine("\n1. Display Recent Entry(s)\n2. Display File Entry");
+        Console.WriteLine("\n[DISPLAY Sub-Menu]");
+        Console.WriteLine("1. Display Recent Entry(s)\n2. Display File Entry");
+        Console.Write("> ");
         string display2Index = Console.ReadLine();
         int display2 = int.Parse(display2Index);
 
         if (display2 == 1)
         {
-            journal.DisplayAllEntries();
+            if (journal._entries.Count == 0)
+            {
+                Console.WriteLine("<There are no entries qued. Write a prompt to begin a que>");
+            }
+            else
+            {
+                journal.DisplayAllEntries();
+            }
         }
+
         if (display2 == 2)
         {
             if (_fileName == null)
             {
-                Console.WriteLine("No file has been loaded to display, load a file and try again.");
+                Console.WriteLine("<No file has been loaded to display, load a file and try again>");
             }
             else
             {
@@ -51,9 +64,9 @@ public class Menu
 
     public string LoadFile()
     {
-        Console.Write("Input file you wish to load your entries into (ex:'files.txt'): ");
+        Console.Write("\nInput file you wish to load your entries into (ex:'files.txt'): ");
         _fileName = Console.ReadLine();
-        Console.WriteLine($"File [{_fileName}] has been loaded into the program.");
+        Console.WriteLine($"<File [{_fileName}] has been loaded into the program>\n");
         return _fileName;
     }
 
@@ -61,12 +74,12 @@ public class Menu
     {
         if (_fileName == null)
         {
-            Console.WriteLine("No file loaded to save entries, load a file and try again.");
+            Console.WriteLine("<No file loaded to save entries, load a file and try again>\n");
         }
         else
         {
             journal.SaveEntriesToFile(_fileName);
-            Console.WriteLine($"Qued entries have been saved to [{_fileName}]");
+            Console.WriteLine($"<Qued entries have been saved to [{_fileName}]>");
         }
     }
 
@@ -75,6 +88,7 @@ public class Menu
         do
         {
             DisplayMenu();
+            Console.Write("> ");
             string menuChoice = Console.ReadLine();
             _menuChoice = int.Parse(menuChoice);
 
