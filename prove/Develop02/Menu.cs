@@ -74,12 +74,12 @@ public class Menu
     {
         if (_fileName == null)
         {
-            Console.WriteLine("\n<No file loaded to save qued entries, load a file and try again>\n");
+            Console.WriteLine("\n<No file loaded to save queued entries, load a file and try again>\n");
         }
         else
         {
             journal.SaveEntriesToFile(_fileName);
-            Console.WriteLine($"<[{journal._entries.Count}] qued entries have been saved to [{_fileName}]>");
+            Console.WriteLine($"<[{journal._entries.Count}] queued entries have been saved to [{_fileName}]>");
         }
     }
 
