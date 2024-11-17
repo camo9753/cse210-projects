@@ -12,7 +12,7 @@ public class Menu
     public void DisplayMenu()
     {
         Console.WriteLine("------------------------------");
-        Console.WriteLine("[Choose an Option Index]");
+        Console.WriteLine("[Choose an Index Option]");
         _menuOptions = new List<string> {"Write", "Display", "Load", "Save", "Quit"};
         for (int i = 0; i < _menuOptions.Count; i++)
         {
@@ -40,7 +40,7 @@ public class Menu
         {
             if (journal._entries.Count == 0)
             {
-                Console.WriteLine("<There are no entries qued. Write a prompt to begin a que>");
+                Console.WriteLine("\n<There are no entries qued. Write a prompt to begin a que>");
             }
             else
             {
@@ -52,7 +52,7 @@ public class Menu
         {
             if (_fileName == null)
             {
-                Console.WriteLine("<No file has been loaded to display, load a file and try again>");
+                Console.WriteLine("\n<No file has been loaded to display, load a file and try again>");
             }
             else
             {
@@ -74,12 +74,12 @@ public class Menu
     {
         if (_fileName == null)
         {
-            Console.WriteLine("<No file loaded to save entries, load a file and try again>\n");
+            Console.WriteLine("\n<No file loaded to save qued entries, load a file and try again>\n");
         }
         else
         {
             journal.SaveEntriesToFile(_fileName);
-            Console.WriteLine($"<Qued entries have been saved to [{_fileName}]>");
+            Console.WriteLine($"<[{journal._entries.Count}] qued entries have been saved to [{_fileName}]>");
         }
     }
 

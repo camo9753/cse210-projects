@@ -44,6 +44,7 @@ public class Journal
         Entry entry = new Entry();
         string recentEntry = entry.CreateEntry();
         _entries.Add(recentEntry);
-        Console.WriteLine("\n<Entry was added to your que>");
+        int entryCount = _entries.Count();
+        Console.WriteLine($"\n<Entry was added to your que. Entries in que:[{entryCount}]>");
     }
 }
