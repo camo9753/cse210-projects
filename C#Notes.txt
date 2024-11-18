@@ -124,3 +124,8 @@ FUNCTIONS()/METHODS()
     def add_numbers(first, second):
         sum = first + second
         return sum
+
+SWITCH CASES***
+
+CONSTRUCTORS***
+
