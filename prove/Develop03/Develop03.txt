@@ -1,0 +1,33 @@
+SCRIPTURE:
+    Methods:
+        DisplayScripture()
+        Hidewords()
+        Scripture([reference:string], [displayScripture:string])
+        CheckIfDone(): return bool
+    Attributes:
+        _reference: reference class 
+        _words: List<Word>
+        _scriptureString: string 
+        _hiddenWordAmount: int
+
+REFERENCE:
+    Methods:
+        GetReference()
+        Reference(reference: string)
+    Attributes:
+        _reference: string
+
+WORD:
+    Methods:
+        HideWord()
+        GetWord()
+        Word(word: string)
+        GetWord(): return _word
+        CheckIfHidden(): return _isHidden
+    Attributes:
+        _word: string
+        _isHidden: bool
+        _underscoreWord: string
+
+PROGRAM:
+    *See attached .PDF
