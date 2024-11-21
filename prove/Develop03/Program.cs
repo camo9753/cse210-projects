@@ -4,6 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Reference getR = new Reference();
+        string referenceText = getR.GetReference();
+
+        Scripture getS = new Scripture(referenceText);
+        List<string> wordList = getS.GetWordList();
+
+        foreach (string word in wordList)
+        {
+            Console.WriteLine(word);
+        }
+        
     }
 }
