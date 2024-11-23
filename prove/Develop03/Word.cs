@@ -3,29 +3,32 @@ using System;
 class Word
 {
     private string _word;
-    private bool _isHidden;
-    private string _underscoreWord;
+    private string _underscoreWord = "";
+    private List<char> _ignoredChars = new List<char>();
 
-    public Word(string word, bool isHidden, string underscoreWord)
+    public Word(string word)
     {
-        _word = word;
-        _isHidden = isHidden;
-        _underscoreWord = underscoreWord;
-    }
-    public void GetWord()
-    {
-
+        _word = word;  
+        _ignoredChars.AddRange(new char[] {',',';',':','_','-'});
     }
     public string GetWord(string word)
     {
-        return word;
+        string hideToWord = word;
+        return hideToWord;
     }
-    public void HideWord()
+    public string HideWord(string hideToWord)
     {
-
-    }
-    public bool CheckIfHidden(bool isHidden)
-    {
-        return isHidden;
+        for(int i = 0; i < hideToWord.Length; i++)
+        {
+            if (!_ignoredChars.Contains(hideToWord[i]))
+            {
+                _underscoreWord = _underscoreWord + '_';
+            }
+            else
+            {
+                _underscoreWord = _underscoreWord + hideToWord[i];
+            }
+        } 
+        return _underscoreWord;
     }
 }
