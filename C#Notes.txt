@@ -129,3 +129,9 @@ SWITCH CASES***
 
 CONSTRUCTORS***
 
+INHERTITANCE
+    "Is-A" Inheritance - Inherits from another class --> Hierarchal
+    Ex: A Car Is-A vehicle, A Child Is-A person. 
+    (Base-Derived, Parent-Child) class
+    
+
