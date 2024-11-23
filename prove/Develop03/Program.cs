@@ -31,7 +31,6 @@ class Program
             else
             {
                 Console.Clear();
-                // Scripture getSRefresh = new Scripture(referenceText,);
                 string hiddenScripture = getS.RemoveRandomWords(wordList);
                 Console.WriteLine(reference + " - " + hiddenScripture);
                 Console.Write("\nPress ENTER to continue or type 'q' to quit: ");

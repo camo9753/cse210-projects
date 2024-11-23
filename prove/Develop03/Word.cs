@@ -9,7 +9,7 @@ class Word
     public Word(string word)
     {
         _word = word;  
-        _ignoredChars.AddRange(new char[] {',',';',':','_','-'});
+        _ignoredChars.AddRange(new char[] {',',';',':','_','-','.'});
     }
     public string GetWord(string word)
     {
