@@ -132,6 +132,10 @@ CONSTRUCTORS***
 INHERTITANCE
     "Is-A" Inheritance - Inherits from another class --> Hierarchal
     Ex: A Car Is-A vehicle, A Child Is-A person. 
-    (Base-Derived, Parent-Child) class
+    (Base/Derived, Parent/Child) class
+    - Place common data & methods in base class
+    - Place unique data & methods in derived class
+
+
     
 
