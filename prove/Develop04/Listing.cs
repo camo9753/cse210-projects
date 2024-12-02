@@ -9,8 +9,8 @@ public class Listing : Activity
         "Who are people that you have helped this week?",
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"};
-
     public Listing(string menuChoice, List<int> activitiesCompleted) : base(menuChoice, activitiesCompleted){}
+    
     public void ListingExercise()
     {
         DisplayAStartMessage();

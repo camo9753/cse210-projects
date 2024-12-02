@@ -36,7 +36,6 @@ public class Breathing : Activity
         }
         DisplayBEndMessage();
         PauseApp(4);
-
         DisplayAEndMessage(timeDuration);
         PauseApp(4);
     }
@@ -46,6 +45,6 @@ public class Breathing : Activity
     }
     public void DisplayBEndMessage()
     {
-        Console.WriteLine($"\n{_endBMessage}");    
+        Console.WriteLine($"\n\n{_endBMessage}");    
     }
 }

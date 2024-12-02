@@ -18,7 +18,6 @@ public class Reflection : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"};
     
-
     public Reflection(string menuChoice, List<int> activitiesCompleted) : base(menuChoice, activitiesCompleted){}
     public void ReflectionExercise()
     {
@@ -57,7 +56,6 @@ public class Reflection : Activity
 
         DisplayREndMessage();
         PauseApp(4);
-
         DisplayAEndMessage(timeDuration);
         PauseApp(4);
     }

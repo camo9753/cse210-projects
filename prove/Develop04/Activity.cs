@@ -5,7 +5,7 @@ public class Activity
     private List<int> _activitiesCompleted = new List<int>();
     public Random _random = new Random();
     
-
+    // This is to initalize the list for the completed activities list
     public Activity(List<int> activitiesCompleted)
     {
         _activitiesCompleted = activitiesCompleted;
@@ -15,13 +15,14 @@ public class Activity
         _menuChoice = menuChoice;
         _activitiesCompleted = activitiesCompleted;
     }
+    
     public int GetTimeDuration()
     {
         Console.Write("\nHow many seconds would you like to perform this activity for: ");
         string userTime = Console.ReadLine();
         int timeDuration = int.Parse(userTime);
 
-        // time is returned in milliseconds
+        // time is returned in <int> seconds
         return timeDuration;
     }
     public void DisplayAStartMessage()
@@ -39,16 +40,16 @@ public class Activity
         while (DateTime.Now < futureTime)
         {
             Console.Write("\\");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Write("\b \b"); 
             Console.Write("|"); 
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Write("\b \b"); 
             Console.Write("/"); 
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Write("\b \b");
             Console.Write("—");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Write("\b \b");
         }
     }
@@ -61,10 +62,10 @@ public class Activity
             sum += num;
         }
 
-        Console.WriteLine($"\nMenu Options [{sum}]:");
+        Console.WriteLine($"\n[{sum}] Menu Options:");
         for (int i = 0; i < _activityList.Count; i++)
         {
-            Console.WriteLine($"  {i+1}. {_activityList[i]} [{_activitiesCompleted[i]}]");
+            Console.WriteLine($"  {i+1}. [{_activitiesCompleted[i]}] {_activityList[i]} Activity");
         }
         Console.WriteLine("  4. Quit");
     }

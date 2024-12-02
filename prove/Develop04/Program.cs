@@ -24,12 +24,9 @@ class Program
             else if(menuChoice != "4")
             {
                 Console.WriteLine("\n<Invalid Input>\n");
+                Thread.Sleep(3000);
             }
 
         }while(menuChoice != "4");
-
-        
-
-        
     }
 }
