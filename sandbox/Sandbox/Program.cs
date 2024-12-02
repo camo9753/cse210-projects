@@ -2,103 +2,26 @@ using System;
 
 class Program
 {
-    class Circle
+    static void Main(string[] args)
     {
-        private double radius;
-        public Circle(double radius)
-        {
-            this.radius = radius;
-        }
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(5);
 
-        public double GetArea()
-        {
-            return Math.PI * Math.Pow(radius, 2);
-        }
-
-        public double GetDiameter()
-        {
-            return radius * 2;
-        }
-
-        public double GetCircumference()
-        {
-            return radius * 2 * Math.PI;
-        }
-
-        public double GetRadius()
-        {
-            return radius;
-        }
-
-        public void SetRadius(double radius)
-        {
-            this.radius = radius;
-        }
-
-        public void Display()
-        {
-            Console.WriteLine($"Area: {GetArea()}");
-            Console.WriteLine($"Radius: {GetRadius()}");
-            Console.WriteLine($"Circumference: {GetCircumference()}");
-
-        }
-    }
-
-    public static void Main(string[] args)
-    {
-        // int x = 10;
-        // Circle myCircle = new Circle(x);
-        // Circle myCircle2 = new Circle(x + 2);
-
-        // myCircle.Display();
-
-        Console.Write("Please enter your name: ");
-        string name = Console.ReadLine();
-        Console.WriteLine(name);
-
-
-
-        // int x = 10;
-        // int y = x++;
-        // Console.WriteLine($"{y}, {x}");
         
-        // int z = ++y;
-        // Console.WriteLine($"{z}, {y}");
-
-        // int total = AddNumbers(20,30);
-        // Console.WriteLine(total);
-
-
-        // for(int i=0; i<10; i++)
-        // {
-        //     Console.WriteLine(i);
-        // }
-
-        // int age = -1;
-        // while(age < 0 || age > 120)
-        // {
-        //     Console.Write("Please enter your age (0-125): ");
-        //     age = int.Parse(Console.ReadLine());
-        //     Console.WriteLine($"Your age is: {age}");
-        // }
-
-        // int age;
-        // do
-        // {
-        //     Console.Write("Please enter your age (0-125): ");
-        //     age = int.Parse(Console.ReadLine());
-        //     Console.WriteLine($"Your age is: {age}");
-        // }while(age < 0 || age > 120);
-
-
-        // List <string> myColors = new List<string>();
-        // myColors.Add("Blue");
-        // myColors.Add("Red");
-        // myColors.Add("Green");
-        // foreach(string color in myColors)
-        // {
-        //     Console.WriteLine(color);
-        // }
-
+        while (DateTime.Now < futureTime)
+        {
+            Console.Write("\\");
+            Thread.Sleep(200);
+            Console.Write("\b \b"); 
+            Console.Write("|"); 
+            Thread.Sleep(200);
+            Console.Write("\b \b"); 
+            Console.Write("/"); 
+            Thread.Sleep(200);
+            Console.Write("\b \b");
+            Console.Write("-");
+            Thread.Sleep(200);
+            Console.Write("\b \b");
+        }
     }
 }

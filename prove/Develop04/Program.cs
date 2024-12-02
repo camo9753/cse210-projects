@@ -7,16 +7,18 @@ class Program
         string menuChoice;
         string[] menuOptions = {"1","2","3"};
         List<int> activitiesCompleted = new List<int>{0,0,0};
-        Activity preActivity = new Activity();
+        Activity preActivity = new Activity(activitiesCompleted);
 
         do
         {
+            Console.Clear();
             preActivity.DisplayMenu();
             Console.Write("\nSelect a choice from the menu: ");
             menuChoice = Console.ReadLine();
             Activity activity = new Activity(menuChoice, activitiesCompleted);
             if (menuOptions.Contains(menuChoice))
             {
+                Console.Clear();
                 activitiesCompleted = activity.BeginActivity();
             }
             else if(menuChoice != "4")
