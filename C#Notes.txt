@@ -136,6 +136,16 @@ INHERTITANCE
     - Place common data & methods in base class
     - Place unique data & methods in derived class
 
+POLYMORPHISM
+    "Poly" --> Many, serveral, multi
+    "Morph" --> change
+    - Takes on many forms & different behavior based upon context
+    EX: Work/Act like a parent/base class 
+        - Looping through objects of base class type
+        - passing objects as parameters as base class type
+        - returning ojects of the base-type class
+    
+
 
     
 

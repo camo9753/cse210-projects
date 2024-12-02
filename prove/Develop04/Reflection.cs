@@ -51,7 +51,7 @@ public class Reflection : Activity
         {
             int randomReflectInt = _random.Next(0, _reflectPrompts.Count);
             Console.Write($"\n> {_reflectPrompts[randomReflectInt]} ");
-            PauseApp(10);
+            PauseApp(5);
         }
 
         DisplayREndMessage();

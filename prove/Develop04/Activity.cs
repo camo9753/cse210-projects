@@ -62,7 +62,7 @@ public class Activity
             sum += num;
         }
 
-        Console.WriteLine($"\n[{sum}] Menu Options:");
+        Console.WriteLine($"\nMenu Options [{sum}]:");
         for (int i = 0; i < _activityList.Count; i++)
         {
             Console.WriteLine($"  {i+1}. [{_activitiesCompleted[i]}] {_activityList[i]} Activity");
