@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarApplication", "sandbox\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceEx", "sandbox\InheritanceEx\InheritanceEx.csproj", "{FD0D1041-AC46-467B-8AB3-89AFE6B26A27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyMorphismEx", "sandbox\PolyMorphismEx\PolyMorphismEx.csproj", "{61A0AF6F-EF88-4CA7-877A-6F9B02DC4563}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +147,10 @@ Global
 		{FD0D1041-AC46-467B-8AB3-89AFE6B26A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD0D1041-AC46-467B-8AB3-89AFE6B26A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD0D1041-AC46-467B-8AB3-89AFE6B26A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A0AF6F-EF88-4CA7-877A-6F9B02DC4563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A0AF6F-EF88-4CA7-877A-6F9B02DC4563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A0AF6F-EF88-4CA7-877A-6F9B02DC4563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A0AF6F-EF88-4CA7-877A-6F9B02DC4563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -171,6 +177,7 @@ Global
 		{80DC8317-35BE-4231-A364-4C264F67218C} = {9BD1CAC1-4326-4D59-9857-A733451B87EB}
 		{792BE273-1EB4-4212-9F4D-E2379F841B4F} = {9BD1CAC1-4326-4D59-9857-A733451B87EB}
 		{FD0D1041-AC46-467B-8AB3-89AFE6B26A27} = {9BD1CAC1-4326-4D59-9857-A733451B87EB}
+		{61A0AF6F-EF88-4CA7-877A-6F9B02DC4563} = {9BD1CAC1-4326-4D59-9857-A733451B87EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19AF66DC-EAD7-4425-8965-A7DBC84E77B9}
