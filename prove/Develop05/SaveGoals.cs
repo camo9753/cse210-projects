@@ -2,6 +2,7 @@ using System;
 
 class SaveGoals : Goal
 {
+    public SaveGoals(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
 
     public void SaveGoalsToFile()
     {

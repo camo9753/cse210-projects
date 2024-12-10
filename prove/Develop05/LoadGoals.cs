@@ -2,14 +2,15 @@ using System;
 
 class LoadGoals : Goal
 {
+    public LoadGoals(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
     public void SetFileName()
     {
         Console.Write("Enter the file name you wish to edit/add future goals to: ");
         _fileName = Console.ReadLine();        
     }
-    public override void SetGoalList()
+    public override List<string[]> SetGoalList()
     {
-        string[] file = File.ReadAllLines(_fileName);
+        string[] file = System.IO.File.ReadAllLines(_fileName);
 
         if (new FileInfo(_fileName).Length == 0)
         {
@@ -33,6 +34,6 @@ class LoadGoals : Goal
             }
             Console.WriteLine($"<Goals have been extracted from [{_fileName}]>");
         }
-
+        return _goalList;
     }
 }

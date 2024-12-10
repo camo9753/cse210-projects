@@ -2,9 +2,12 @@ using System;
 
 class SimpleGoal : Goal
 {
-    public void CreateSimpleGoal()
+    
+
+    public SimpleGoal(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
+    public void CreateSimpleGoal(string type)
     {
-        SetNewGoal();
+        SetNewGoal(type);
     }
 
 }

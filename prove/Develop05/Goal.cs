@@ -11,15 +11,20 @@ using System;
 
 class Goal
 {
-    Menu menu = new Menu();
     protected string _fileName;
     protected List<string[]> _goalList;
-    private List<string> _goal;
+    protected List<string> _goal = new List<string> {"","","","","","","",""};
     private int _pointTotal;
  
-    public virtual void SetNewGoal()
+    public Goal(){}
+    public Goal(int pointTotal, List<string[]> goalList)
     {
-        _goal[0] = SetGoalType();
+        _goalList = goalList;
+        _pointTotal = pointTotal;
+    }
+    public virtual void SetNewGoal(string goalType)
+    {
+        _goal[0] = goalType;
         _goal[1] = SetGoalName();
         _goal[2] = SetGoalDiscription();
         _goal[3] = SetGoalPointAmount();
@@ -34,21 +39,23 @@ class Goal
     {
         return _goalList;
     }
-    public virtual void SetGoalList()
+    public virtual List<string[]> SetGoalList()
     {
         _goalList.Add(_goal.ToArray());
+        return _goalList;
     }
     public void DisplayGoals()
     {
-        if (GetGoalList().Count == 0)
+        if (_goalList.Count == 0)
         {
             Console.WriteLine($"There are no goals currently qequed.");
         }
         else
         {
-            int count = 1;
-            foreach (string[] goal in GetGoalList())
+            int count = 0;
+            foreach (string[] goal in _goalList)
             {
+                count++;
                 string type = goal[0];
                 string name = goal[1];
                 string discription = goal[2];
@@ -78,7 +85,7 @@ class Goal
                     Console.WriteLine($"{count}. {strStatus} {name}-({discription}) -- Currently completed: {frequencyCompleted}/{frequency}");
                 }
                 
-                count = count++;
+                
             }
         }
     }
@@ -87,10 +94,10 @@ class Goal
     {
         string goalType = "";
         string goalInt;
+        List<string> goalOptions = new List<string> {"1","2","3"};
         
         do
         {
-            menu.DisplayGoalOptions();
             Console.Write("Which type of goal would you like to create? ");
             goalInt = Console.ReadLine();
 
@@ -110,7 +117,8 @@ class Goal
             {
                 Console.WriteLine("<Invalid input. Please enter a goal type>");
             }
-        }while(!new[] {"1","2","3"}.Contains(goalInt));
+        
+        }while(!goalOptions.Contains(goalInt));
     
         return goalType;
     }

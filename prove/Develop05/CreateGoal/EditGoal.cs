@@ -1,12 +1,13 @@
 using System;
 
-class EditedGoal
+class EditedGoal : Goal 
 {
-    private List<string> _editedGoal;
+    private List<string> _editedGoal = new List<string>{"test","test1"};
 
     public List<string> EditGoal()
     {
-        return;
+        List<string> testList = _editedGoal;
+        return testList;
     }
     
 }

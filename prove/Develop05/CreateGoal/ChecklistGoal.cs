@@ -8,16 +8,18 @@ using System;
     // strStatus = goal[6];
     // frequencyCompleted = goal[7];
 
-class Checklist : Goal
+class ChecklistGoal : Goal
 {
-    private List<string> _goal;
-    public void CreateChecklistGoal()
+    public ChecklistGoal(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
+
+
+    public void CreateChecklistGoal(string type)
     {
-        SetNewGoal();
+        SetNewGoal(type);
     }
-    public override void SetNewGoal()
+    public override void SetNewGoal(string goalType)
     {
-        _goal[0] = SetGoalType();
+        _goal[0] = goalType;
         _goal[1] = SetGoalName();
         _goal[2] = SetGoalDiscription();
         _goal[3] = SetGoalPointAmount();

@@ -7,8 +7,10 @@ using System;
     // bonusPoints = goal[5];
     // strStatus = goal[6];
     // frequencyCompleted = goal[7];
-class RecordEvents : Goal
+class RecordEvent : Goal
 {
+    public RecordEvent(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
+
     private int goalInt;
     public void CompleteGoal(int goalInt)
     {
@@ -56,5 +58,4 @@ class RecordEvents : Goal
         goalInt = int.Parse(strGoal);
         return goalInt - 1;
     }
-    
 }
