@@ -6,7 +6,7 @@
     }
     public static void Main(string[] args)
     {
-        Person bob = new Person("Bob", "Billy", 37);
+        // Person bob = new Person("Bob", "Billy", 37);
         // Console.WriteLine(bob.GetPersonInfo());
 
         Doctor doctorBob = new Doctor("Jerry", "Budge", 65, "Hack Saw");
@@ -21,11 +21,11 @@
         // Console.WriteLine(policeDoug.GetPoliceInfo());
         // Console.WriteLine(policeDoug.GetPersonInfo());
 
-        SetPersonFirstName(bob, "Bobby");
-        Console.WriteLine(bob.GetPersonInfo());
+        // SetPersonFirstName(bob, "Bobby");
+        // Console.WriteLine(bob.GetPersonInfo());
 
         List<Person> people = new List<Person>();
-        people.Add(bob);
+        // people.Add(bob);
         people.Add(doctorBob);
         people.Add(policeDoug);
 

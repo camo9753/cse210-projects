@@ -141,7 +141,7 @@ POLYMORPHISM
     "Morph" --> change
     - Takes on many forms & different behavior based upon context
     - "virtual" vs "abstract [classes]" methods***
-    - "Interfaces" are a special abstract class
+    - "Interfaces" classes (code) are a special abstract class with all abstrat methods
     EX: Work/Act like a parent/base class 
         - Looping through objects of base class type
         - passing objects as parameters as base class type
