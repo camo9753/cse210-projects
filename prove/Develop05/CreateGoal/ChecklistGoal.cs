@@ -10,7 +10,7 @@ using System;
 
 class ChecklistGoal : Goal
 {
-    public ChecklistGoal(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
+    public ChecklistGoal(int pointTotal) : base(pointTotal){}
 
 
     public void CreateChecklistGoal(string type)
@@ -19,17 +19,20 @@ class ChecklistGoal : Goal
     }
     public override void SetNewGoal(string goalType)
     {
-        _goal[0] = goalType;
-        _goal[1] = SetGoalName();
-        _goal[2] = SetGoalDiscription();
-        _goal[3] = SetGoalPointAmount();
-        _goal[4] = SetGoalFrequency();
-        _goal[5] = SetBonusPoints();
-        _goal[6] = "false";
-        _goal[7] = "0";
+        // _goal[0] = goalType;
+        // _goal[1] = SetGoalName();
+        // _goal[2] = SetGoalDiscription();
+        // _goal[3] = SetGoalPointAmount();
+        // _goal[4] = SetGoalFrequency();
+        // _goal[5] = SetBonusPoints();
+        // _goal[6] = "false";
+        // _goal[7] = "0";
 
-        SetGoalList();
+        // SetGoalList();
     }
-
+    public override int RecordEvent()
+    {
+        return 0;
+    }
 
 }

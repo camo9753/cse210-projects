@@ -1,9 +1,9 @@
 using System;
 
-class Menu : Goal
+class Menu
 {
     private int _pointTotal;
-    public Menu(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList)
+    public Menu(int pointTotal)
     {
         _pointTotal = pointTotal;
     }

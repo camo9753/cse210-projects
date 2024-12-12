@@ -9,87 +9,98 @@ using System;
     // strStatus = goal[6];
     // frequencyCompleted = goal[7];
 
-class Goal
+abstract class Goal
 {
     protected string _fileName;
-    protected List<string[]> _goalList;
+    // protected List<string[]> _goalList;
     protected List<string> _goal = new List<string> {"","","","","","","",""};
     private int _pointTotal;
+    private string goalType;
+    private string goalName;
+    private string goalDiscription;
+    private int points;
+    private int maxNum;
+    private int bonusPoints;
+    private bool status;
+    private int numCompleted;
+
  
     public Goal(){}
-    public Goal(int pointTotal, List<string[]> goalList)
+    public Goal(int pointTotal)
     {
-        _goalList = goalList;
         _pointTotal = pointTotal;
     }
-    public virtual void SetNewGoal(string goalType)
+    public virtual void SetNewGoal(string Type)
     {
-        _goal[0] = goalType;
-        _goal[1] = SetGoalName();
-        _goal[2] = SetGoalDiscription();
-        _goal[3] = SetGoalPointAmount();
+        goalType = Type;
+        goalName = SetGoalName();
+        goalDiscription = SetGoalDiscription();
+        points= SetGoalPointAmount();
         _goal[4] = "0";
         _goal[5] = "0";
         _goal[6] = "false";
         _goal[7] = "0";
 
-        SetGoalList();
+        // SetGoalList();
     }
-    public List<string[]> GetGoalList() 
-    {
-        return _goalList;
-    }
-    public virtual List<string[]> SetGoalList()
-    {
-        _goalList.Add(_goal.ToArray());
-        return _goalList;
-    }
-    public void DisplayGoals()
-    {
-        if (_goalList.Count == 0)
-        {
-            Console.WriteLine($"There are no goals currently qequed.");
-        }
-        else
-        {
-            int count = 0;
-            foreach (string[] goal in _goalList)
-            {
-                count++;
-                string type = goal[0];
-                string name = goal[1];
-                string discription = goal[2];
-                string points = goal[3];
-                string frequency = goal[4];
-                string bonusPoints = goal[5];
-                string strStatus = goal[6];
-                string frequencyCompleted = goal[7];
+    // public List<string[]> GetGoalList() 
+    // {
+    //     return _goalList;
+    // }
+    // public virtual List<string[]> SetGoalList()
+    // {
+    //     _goalList.Add(_goal.ToArray());
+    //     return _goalList;
+    // }
+    // public void DisplayGoals()
+    // {
+    //     if (_goalList.Count == 0)
+    //     {
+    //         Console.WriteLine($"There are no goals currently qequed.");
+    //     }
+    //     else
+    //     {
+    //         int count = 0;
+    //         foreach (string[] goal in _goalList)
+    //         {
+    //             count++;
+    //             string type = goal[0];
+    //             string name = goal[1];
+    //             string discription = goal[2];
+    //             string points = goal[3];
+    //             string frequency = goal[4];
+    //             string bonusPoints = goal[5];
+    //             string strStatus = goal[6];
+    //             string frequencyCompleted = goal[7];
 
-                bool status = bool.Parse(strStatus);
-                if (status == true)
-                {
-                    strStatus = "[X]";
-                }
-                else
-                {
-                    strStatus = "[ ]";
-                }
+    //             bool status = bool.Parse(strStatus);
+    //             if (status == true)
+    //             {
+    //                 strStatus = "[X]";
+    //             }
+    //             else
+    //             {
+    //                 strStatus = "[ ]";
+    //             }
 
 
-                if (frequency == "0")
-                {
-                    Console.WriteLine($"{count}. {strStatus} {name}-({discription})");
-                }
-                else
-                {
-                    Console.WriteLine($"{count}. {strStatus} {name}-({discription}) -- Currently completed: {frequencyCompleted}/{frequency}");
-                }
+    //             if (frequency == "0")
+    //             {
+    //                 Console.WriteLine($"{count}. {strStatus} {name}-({discription})");
+    //             }
+    //             else
+    //             {
+    //                 Console.WriteLine($"{count}. {strStatus} {name}-({discription}) -- Currently completed: {frequencyCompleted}/{frequency}");
+    //             }
                 
                 
-            }
-        }
+    //         }
+    //     }
+    // }
+    public void DisplayGoal()
+    {
+        Console.WriteLine($"[ ]{goalName} - {goalDiscription} - {points}");
     }
-
     public string SetGoalType()
     {
         string goalType = "";
@@ -134,10 +145,10 @@ class Goal
         string goalDiscription = Console.ReadLine();
         return goalDiscription;
     }
-    public string SetGoalPointAmount()
+    public int SetGoalPointAmount()
     {
         Console.Write("What is the amount of points associated with this goal? ");
-        string pointGoal = Console.ReadLine();
+        int pointGoal = int.Parse(Console.ReadLine());
         return pointGoal;
     }
     public string SetGoalFrequency()
@@ -161,5 +172,11 @@ class Goal
     {
         return _pointTotal;
     }
+    public abstract int RecordEvent();
 
+    public int GetPoints()
+    {
+        return points;
+    }
+    
 }

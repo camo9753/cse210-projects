@@ -4,12 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {   
-
-        
-        List<string[]> goalList = new List<string[]>();
+        List<Goal> goalList = new List<Goal>();
         int pointTotal = 0;
-        Goal goal = new Goal(pointTotal, goalList);
-        Menu preMenu = new Menu(pointTotal, goalList);
+        // Goal goal = new Goal(pointTotal, goalList);
+        Menu menu = new Menu(pointTotal);
 
         List<string> choiceList = new List<string> {"1","2","3","4","5","6","7"};
         
@@ -25,70 +23,66 @@ class Program
         string Eternal = "Eternal";
         string Checklist = "Checklist";
 
-        preMenu.DisplayMenu();
+        menu.DisplayMenu();
         Console.Write("Select a choice from the menu: ");
         string choice = Console.ReadLine();
 
         // Start of Program loop
         while (choice != Quit)
         {
-            Menu menu = new Menu(pointTotal, goalList);
             if (choice == CreateNewGoal)
             {
                 
                 menu.DisplayGoalOptions();
-                string goalType = goal.SetGoalType();
-                if (goalType == Simple)
+                // string goalType = goal.SetGoalType(); 
+                int selection = int.Parse(Console.ReadLine());
+                if (selection == 1)
                 {
-                    SimpleGoal simpleGoal = new SimpleGoal(pointTotal, goalList);
-                    simpleGoal.CreateSimpleGoal(goalType);
+                    SimpleGoal simpleGoal = new SimpleGoal(pointTotal);
+                    simpleGoal.CreateSimpleGoal("Simple");
+                    goalList.Add(simpleGoal);
                 }
-                else if (goalType == Eternal)
-                {
-                    EternalGoal eternalGoal = new EternalGoal(pointTotal, goalList);
-                    eternalGoal.CreateEternalGoal(goalType);
-                }
-                else if (goalType == Checklist)
-                {
-                    ChecklistGoal checklist = new ChecklistGoal(pointTotal, goalList);
-                    checklist.CreateChecklistGoal(goalType);
-                }
-                goalList = goal.GetGoalList();
+                // else if (goalType == Eternal)
+                // {
+                //     EternalGoal eternalGoal = new EternalGoal(pointTotal, goalList);
+                //     eternalGoal.CreateEternalGoal(goalType);
+                // }
+                // else if (goalType == Checklist)
+                // {
+                //     ChecklistGoal checklist = new ChecklistGoal(pointTotal, goalList);
+                //     checklist.CreateChecklistGoal(goalType);
+                // }
+                // goalList = goal.GetGoalList();
                 Console.WriteLine("\n<Goal has been created>");
 
             }
             else if (choice == ListGoals)
             {
-                ListGoals listGoals = new ListGoals(pointTotal, goalList);
-                listGoals.ListUserGoals();
+                foreach (Goal goal in goalList)
+                {
+                    goal.DisplayGoal();
+                }
             }
-            else if (choice == SaveGoals)
-            {
-                SaveGoals saveGoals = new SaveGoals(pointTotal, goalList);
-                saveGoals.SaveGoalsToFile();
-            }
-            else if (choice == LoadGoals)
-            {
-                LoadGoals loadGoals = new LoadGoals(pointTotal, goalList);
-                loadGoals.SetFileName();
-                loadGoals.SetGoalList();
-            }
+            // else if (choice == SaveGoals)
+            // {
+            //     SaveGoals saveGoals = new SaveGoals(pointTotal, goalList);
+            //     saveGoals.SaveGoalsToFile();
+            // }
+            // else if (choice == LoadGoals)
+            // {
+            //     LoadGoals loadGoals = new LoadGoals(pointTotal, goalList);
+            //     loadGoals.SetFileName();
+            //     loadGoals.SetGoalList();
+            // }
             else if (choice == EditGoal)
             {
 
             }
             else if (choice == RecordEvent)
             {
-                RecordEvent recordEvent = new RecordEvent(pointTotal, goalList);
-                if (goal.GetGoalList().Count == 0)
+                foreach (Goal goal in goalList)
                 {
-                    Console.WriteLine($"There are no goals currently qued.");
-                }
-                else
-                {
-                    int goalInt = recordEvent.PickGoal();
-                    recordEvent.CompleteGoal(goalInt);
-                    pointTotal = goal.GetPointTotal();
+                    pointTotal += goal.GetPoints();
                 }
                 
             }
@@ -97,8 +91,9 @@ class Program
                 Console.WriteLine("<Invalid Input>");
             }
 
-            Menu postMenu = new Menu(pointTotal, goalList);
-            postMenu.DisplayMenu();
+            // Menu postMenu = new Menu(pointTotal, goalList);
+            menu.DisplayMenu();
+            Console.WriteLine($"Total Points: {pointTotal}");
             Console.Write("Select a choice from the menu: ");
             choice = Console.ReadLine();
         }

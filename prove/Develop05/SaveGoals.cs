@@ -1,28 +1,28 @@
 using System;
 
-class SaveGoals : Goal
+class SaveGoals
 {
-    public SaveGoals(int pointTotal, List<string[]> goalList) : base(pointTotal, goalList){}
+    public SaveGoals(int pointTotal){}
 
-    public void SaveGoalsToFile()
-    {
-        _goalList = GetGoalList();
+    // public void SaveGoalsToFile()
+    // {
+    //     _goalList = GetGoalList();
 
-        if (_fileName == null)
-        {
-            FileNotFound();
-        }
-        else
-        {
-            using (StreamWriter outputFile = new StreamWriter(_fileName))
-            {
-                foreach (string[] goal in _goalList)
-                {
-                    outputFile.WriteLine(goal);
-                }
-            }
-        }
-    }
+    //     if (_fileName == null)
+    //     {
+    //         FileNotFound();
+    //     }
+    //     else
+    //     {
+    //         using (StreamWriter outputFile = new StreamWriter(_fileName))
+    //         {
+    //             foreach (string[] goal in _goalList)
+    //             {
+    //                 outputFile.WriteLine(goal);
+    //             }
+    //         }
+    //     }
+    // }
     public void FileNotFound()
     {
         Console.WriteLine("<There is no file loaded to the program>");
