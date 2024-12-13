@@ -11,12 +11,10 @@ class Cycling : Activity
     {
         return (_speed * GetDuration()) / 60;
     }
-
     public override double GetSpeed()
     {
         return _speed;
     }
-
     public override double GetPace()
     {
         return 60 / _speed;

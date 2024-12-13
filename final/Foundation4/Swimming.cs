@@ -13,12 +13,10 @@ class Swimming : Activity
     {
         return _laps * _lapDistanceInMiles;
     }
-
     public override double GetSpeed()
     {
         return GetDistance() / GetDuration() * 60;
     }
-
     public override double GetPace()
     {
         return GetDuration() / GetDistance();
